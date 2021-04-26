@@ -5,9 +5,9 @@ import { ListSpecificationsUseCase } from './ListSpecificationsUseCase';
 class ListSpecificationsController {
   constructor(private listSpecificationsUseCase: ListSpecificationsUseCase) {}
   handle(request: Request, response: Response): Response {
-    const categories = this.listSpecificationsUseCase.execute();
+    const specifications = this.listSpecificationsUseCase.execute();
 
-    return response.status(201).json(categories);
+    return response.status(200).json(specifications);
   }
 }
 
