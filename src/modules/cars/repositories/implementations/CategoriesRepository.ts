@@ -7,6 +7,7 @@ import {
 class CategoriesRepository implements ICategoriesRepository {
   private categories: Category[];
 
+  // singleton -> Para termos somente uma instancia dentro da aplicação...
   private static INSTANCE: CategoriesRepository;
 
   private constructor() {
