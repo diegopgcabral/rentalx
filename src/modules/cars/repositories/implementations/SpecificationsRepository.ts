@@ -7,6 +7,7 @@ import {
 class SpecificationsRepository implements ISpecificationsRepository {
   private specifications: Specification[];
 
+  // singleton -> Para termos somente uma instancia dentro da aplicação...
   private static INSTANCE: SpecificationsRepository;
 
   private constructor() {
