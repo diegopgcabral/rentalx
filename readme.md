@@ -376,3 +376,47 @@ Create launch.JSON
 ```bash
 "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
 ```
+
+### Criar imagem aplicação docker
+
+```
+// Informa qual a versão
+FROM node:latest
+
+// Defini diretório de trabalho
+WORKDIR /usr/app
+
+//Copia o arquivo
+COPY package.json ./
+
+//Instala os pacotes
+RUN npm install
+
+// Faz uma cópia para o diretório
+COPY . .
+
+// Libera a porta da aplicação
+EXPOSE 3333
+
+// Roda a aplicação
+CMD ["npm","run", "dev"]
+```
+
+### Executar no diretório onde tá o arquivo DockerFile
+```bash
+docker build -t rentalx .
+```
+### Rodar a imagem
+```bash
+docker run -p 3333:3333 rentalx
+```
+
+### Acessar o diretório da imagem
+```bash
+docker exec -it <nome do container> /bin/bash
+```
+
+### Visualizar log do container
+```bash
+docker logs <nome do container> -f
+```
