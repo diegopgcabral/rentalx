@@ -420,3 +420,21 @@ docker exec -it <nome do container> /bin/bash
 ```bash
 docker logs <nome do container> -f
 ```
+
+### Instalar TYPEORM e Reflect-metadata
+```bash
+yarn add typeorm reflect-metadata
+```
+### Instalar driver do database da sua escolha
+```bash
+yarn add pg
+```
+## Habilitar no tsconfig
+/* Experimental Options */
+"experimentalDecorators": true,              /* Enables experimental support for ES7 decorators. */
+"emitDecoratorMetadata": true,               /* Enables experimental support for emitting type metadata for decorators. */
+
+### Recriar o docker
+```bash
+docker-compose up --force-recreate
+```
