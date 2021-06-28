@@ -438,3 +438,16 @@ yarn add pg
 ```bash
 docker-compose up --force-recreate
 ```
+### Criar uma migration
+```bash
+yarn typeorm migration:create -n [nome_migration]
+```
+### Executar uma migration
+```bash
+yarn typeorm migration:run
+```
+### Reverter uma migration
+```bash
+yarn typeorm migration:revert
+```
+
