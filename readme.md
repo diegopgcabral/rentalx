@@ -450,4 +450,8 @@ yarn typeorm migration:run
 ```bash
 yarn typeorm migration:revert
 ```
+### TSyringe ( Facilitador para injeção de dependências)
 
+```bash
+yarn add tsyringe
+```
