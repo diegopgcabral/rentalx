@@ -8,4 +8,3 @@
 * Dentro de cada pasta do use case, teremos:
   - Controller
   - useCase
-  - index
